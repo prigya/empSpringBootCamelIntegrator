@@ -6,7 +6,6 @@
 	<groupId>com.springboot.camel</groupId>
 	<artifactId>SpringbootCamelIntegrator</artifactId>
 	<version>0.0.1</version>
-	<packaging>war</packaging>
 
 	<name>SpringbootCamelIntegrator</name>
 	<description>Demo project for Spring Boot and Apache Camel</description>
