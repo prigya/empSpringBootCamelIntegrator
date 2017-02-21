@@ -12,7 +12,7 @@ public class CamelServiceRoute extends RouteBuilder{
 		
 		from("timer:foo?fixedRate=true&period=5000&delay=3000")
 		//.to("restlet:http://localhost:8081/employees?restletMethod=get")
-		.to("restlet: http://employeedetails01-lean-architecture-poc.44fs.preview.openshiftapps.com/employees?restletMethod=get")
+		.to("restlet:http://employeedetails01-lean-architecture-poc.44fs.preview.openshiftapps.com/employees?restletMethod=get")
 			.process(new Processor(){
 				@Override
 		         public void process(Exchange exchange) throws Exception {
