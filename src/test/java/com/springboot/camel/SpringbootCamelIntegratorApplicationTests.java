@@ -1,4 +1,4 @@
-package com.springboot.camel;
+/*package com.springboot.camel;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,3 +14,4 @@ public class SpringbootCamelIntegratorApplicationTests {
 	}
 
 }
+*/

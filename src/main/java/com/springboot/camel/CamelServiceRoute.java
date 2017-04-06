@@ -12,7 +12,8 @@ public class CamelServiceRoute extends RouteBuilder{
 		
 		from("timer:foo?fixedRate=true&period=5000&delay=3000")
 		//.to("restlet:http://localhost:8081/employees?restletMethod=get")
-		.to("restlet:http://employeedetails01-lean-architecture-poc.44fs.preview.openshiftapps.com/employees?restletMethod=get")
+		//.to("restlet:http://employeedetails01-lean-architecture-poc.44fs.preview.openshiftapps.com/employees?restletMethod=get")
+		.to("restlet:http://empdetailmaster-microservicesdemo.cloudapps.test.openshift.opentlc.com?restletMethod=get")
 			.process(new Processor(){
 				@Override
 		         public void process(Exchange exchange) throws Exception {
@@ -26,7 +27,8 @@ public class CamelServiceRoute extends RouteBuilder{
 			         exchange.getOut().setBody(req);
 				}
 		       })
-		.to("restlet:http://emptimerecords01-lean-architecture-poc.44fs.preview.openshiftapps.com?restletMethod=post");
+		//.to("restlet:http://emptimerecords01-lean-architecture-poc.44fs.preview.openshiftapps.com?restletMethod=post");
+		.to("restlet:http://emp-time-record-service-microservicesdemo.cloudapps.test.openshift.opentlc.com?restletMethod=post");
 		
 		
 		
